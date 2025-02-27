@@ -2,11 +2,11 @@ package org.shad.warmup;
 
 import org.shad.model.dto.response.TipResponse;
 import org.shad.service.ApiClientService;
-import org.shad.service.ApiClientServiceImpl;
+import org.shad.service.impl.ApiClientServiceImpl;
 
 import java.util.Scanner;
 
-public class Step1 {
+public class ChallengeFirst {
 
     private static final ApiClientService apiClient = new ApiClientServiceImpl();
     private static final Scanner scanner = new Scanner(System.in);
@@ -22,6 +22,10 @@ public class Step1 {
             scanner.nextLine();
 
             TipResponse tipResponse = apiClient.getInitialTip();
+
+            System.out.println("Initial tip received successfully!");
+            System.out.println("Tip Message: " + tipResponse.getTipMessage());
+            System.out.println("Next Step Hint: " + tipResponse.getNextStepHint());
 
         } catch (Exception e) {
             System.err.println("\n⚠️ Investigation failed: " + e.getMessage());

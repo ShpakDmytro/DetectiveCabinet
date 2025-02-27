@@ -1,9 +1,7 @@
-package org.shad.warmup;
+package org.shad.mainpart;
 
 import org.shad.model.dto.request.AuthRequest;
-import org.shad.model.dto.request.RegisterRequest;
 import org.shad.model.dto.response.AuthResponse;
-import org.shad.model.dto.response.RegistrationResponse;
 import org.shad.service.ApiClientService;
 import org.shad.service.impl.ApiClientServiceImpl;
 
@@ -27,7 +25,6 @@ public class ChallengeThird {
             System.out.println("Login successful!");
             System.out.println("Next Challenge Hint: " + authResponse.getNextChallengeHint());
             System.out.println("JWT Token received");
-
 
 
         } catch (Exception e) {

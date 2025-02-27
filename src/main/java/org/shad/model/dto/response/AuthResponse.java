@@ -1,4 +1,21 @@
-package org.shad.model.dto.request;
+package org.shad.model.dto.response;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * Response DTO for authentication operations.
+ */
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class AuthResponse {
+
+    private String accessToken;
+    private String refreshToken;
+    private String username;
+    private String nextChallengeHint;
 }
